@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const Gant = require("../models/ganttSchema");
+const Gant = require("../models/serviceSchema");
 
 //GET
 router.get("/:id", async (req, res) => {

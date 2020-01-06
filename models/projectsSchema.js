@@ -3,14 +3,15 @@
 const mongoose = require("mongoose");
 import { ressourcesSchema } from "./ressourcesSchema.js";
 
-const ganttSchema = mongoose.Schema({
+const projectsSchema = mongoose.Schema({
   name: String,
   description: String,
-  daysOff: Date, // mettre en timestamp
-  resources: ressourcesSchema
+  daysOff: toto, // mettre en timestamp
+  resources: ressourcesSchema,
+  task: taskSchema
 });
 
-module.exports = mongoose.model("ganttSchema", ganttSchema);
+module.exports = mongoose.model("projectsSchema", projectsSchema);
 
 // {
 //   nameService : "Demo",
