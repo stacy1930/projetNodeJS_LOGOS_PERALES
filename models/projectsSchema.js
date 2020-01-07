@@ -2,13 +2,17 @@
 
 const mongoose = require("mongoose");
 import { ressourcesSchema } from "./ressourcesSchema.js";
+import { milestonesSchema } from "./milestonesSchema.js";
 
 const projectsSchema = mongoose.Schema({
   name: String,
-  description: String,
+  desc: String,
   daysOff: toto, // mettre en timestamp
+  workingHours: toto,
+  task: taskSchema,
+  groupTask: toto,
   resources: ressourcesSchema,
-  task: taskSchema
+  milestones: milestonesSchema
 });
 
 module.exports = mongoose.model("projectsSchema", projectsSchema);
