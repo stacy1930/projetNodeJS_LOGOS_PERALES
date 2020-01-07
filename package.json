@@ -1,0 +1,27 @@
+{
+  "name": "projetnodejs_logos_perales",
+  "version": "1.0.0",
+  "description": "Projet Node JS Logos Perals",
+  "main": "index.js",
+  "dependencies": {
+    "eol": "^0.9.1",
+    "express": "^4.17.1",
+    "mongodb": "^3.3.5",
+    "mongoose": "^5.8.1",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stacy1930/projetNodeJS_LOGOS_PERALES.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stacy1930/projetNodeJS_LOGOS_PERALES/issues"
+  },
+  "homepage": "https://github.com/stacy1930/projetNodeJS_LOGOS_PERALES#readme"
+}
