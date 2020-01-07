@@ -7,8 +7,16 @@ import { milestonesSchema } from "./milestonesSchema.js";
 const projectsSchema = mongoose.Schema({
   name: String,
   desc: String,
-  daysOff: toto, // mettre en timestamp
-  workingHours: toto,
+  daysOff: {
+    Mo: true,
+    Tu: true,
+    We: true,
+    Th: true,
+    Fr: true,
+    Sa: false,
+    Su: false
+  },
+  workingHours: { start: moment().hour(), end: moment().hour() },
   task: taskSchema,
   groupTask: toto,
   resources: ressourcesSchema,
