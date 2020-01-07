@@ -3,6 +3,7 @@
 const mongoose = require("mongoose");
 import { ressourcesSchema } from "./ressourcesSchema.js";
 import { milestonesSchema } from "./milestonesSchema.js";
+import { groupTaskSchema } from "./groupTaskSchema.js";
 
 const projectsSchema = mongoose.Schema({
   name: String,
@@ -18,7 +19,7 @@ const projectsSchema = mongoose.Schema({
   },
   workingHours: { start: moment().hour(), end: moment().hour() },
   task: taskSchema,
-  groupTask: toto,
+  groupTask: groupTaskSchema,
   resources: ressourcesSchema,
   milestones: milestonesSchema
 });
