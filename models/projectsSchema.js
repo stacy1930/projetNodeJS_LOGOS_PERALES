@@ -1,9 +1,6 @@
 "use strict";
 
 const mongoose = require("mongoose");
-import { ressourcesSchema } from "./ressourcesSchema.js";
-import { milestonesSchema } from "./milestonesSchema.js";
-import { groupTaskSchema } from "./groupTaskSchema.js";
 
 const projectsSchema = mongoose.Schema({
   name: String,
@@ -18,10 +15,31 @@ const projectsSchema = mongoose.Schema({
     Su: false
   },
   workingHours: { start: moment().hour(), end: moment().hour() },
-  task: taskSchema,
-  groupTask: groupTaskSchema,
-  resources: ressourcesSchema,
-  milestones: milestonesSchema
+  task: [
+    {
+      task: mongoose.Types.ObjectId,
+      ref: "taskSchema"
+    }
+  ],
+  groupTask: [
+    {
+      groupTask: mongoose.Types.ObjectId,
+      ref: "groupTaskSchema"
+    }
+  ],
+  resources: [
+    {
+      resources: mongoose.Types.ObjectId,
+      ref: "ressourcesSchema"
+    }
+  ],
+
+  milestones: [
+    {
+      milestones: mongoose.Types.ObjectId,
+      ref: "milestonesSchema"
+    }
+  ]
 });
 
 module.exports = mongoose.model("projectsSchema", projectsSchema);
